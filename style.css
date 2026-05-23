@@ -1,0 +1,179 @@
+:root {
+  --ivory: #f7f2ea;
+  --paper: #fffaf3;
+  --champagne: #d8c3a5;
+  --taupe: #9d8b78;
+  --espresso: #3b2a23;
+  --sage: #7b8565;
+  --white: #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--espresso);
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+.hero {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255,255,255,.9), transparent 22%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,.55), transparent 18%),
+    linear-gradient(rgba(247,242,234,.84), rgba(247,242,234,.92)),
+    url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  padding: 28px 8%;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: var(--espresso);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .18em;
+}
+
+.hero-card {
+  margin: auto 20px;
+  max-width: 560px;
+  width: calc(100% - 40px);
+  padding: 62px 36px;
+  background: rgba(255,250,243,.82);
+  border: 1px solid rgba(216,195,165,.8);
+  outline: 12px solid rgba(255,255,255,.45);
+  text-align: center;
+  box-shadow: 0 20px 70px rgba(59,42,35,.12);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .28em;
+  color: var(--taupe);
+  margin-bottom: 18px;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(72px, 13vw, 142px);
+  font-weight: 400;
+  line-height: .82;
+  margin: 24px 0 34px;
+  color: var(--espresso);
+}
+
+h1 span {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: .38em;
+}
+
+h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(42px, 8vw, 72px);
+  font-weight: 500;
+  margin: 0 0 24px;
+}
+
+h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+
+.date, .location {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 34px;
+  border: 1px solid var(--espresso);
+  color: var(--espresso);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .22em;
+  transition: .25s ease;
+}
+
+.button:hover {
+  background: var(--espresso);
+  color: var(--ivory);
+}
+
+.section {
+  padding: 90px 8%;
+  max-width: 1160px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.paper {
+  max-width: 100%;
+  background:
+    linear-gradient(rgba(255,250,243,.88), rgba(255,250,243,.88)),
+    repeating-linear-gradient(45deg, rgba(216,195,165,.16), rgba(216,195,165,.16) 1px, transparent 1px, transparent 9px);
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 42px;
+}
+
+.details-grid div {
+  background: rgba(255,255,255,.44);
+  border: 1px solid rgba(216,195,165,.75);
+  padding: 34px 24px;
+}
+
+.details-grid p, .story-text {
+  line-height: 1.85;
+  font-size: 15px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rsvp {
+  background: var(--ivory);
+}
+
+footer {
+  padding: 50px 8%;
+  text-align: center;
+  background: var(--espresso);
+  color: var(--ivory);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+}
+
+footer p { margin: 6px 0; }
+
+@media (max-width: 800px) {
+  .details-grid { grid-template-columns: 1fr; }
+  nav { gap: 18px; }
+  .hero-card { padding: 48px 24px; }
+}
